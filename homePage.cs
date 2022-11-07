@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace ToDue
 {
-    public partial class Form1 : Form
+    public partial class homePage : Form
     {
-        public Form1()
+        public homePage()
         {
             InitializeComponent();
+        }
+
+        private void btnAddNewTask_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboxSortBy_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
 
     }
