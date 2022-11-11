@@ -46,11 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="AddNewTask.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="AddNewTask.Designer.cs">
+      <DependentUpon>AddNewTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteTask.Designer.cs">
+      <DependentUpon>DeleteTask.cs</DependentUpon>
     </Compile>
     <Compile Include="homePage.cs">
       <SubType>Form</SubType>
@@ -60,8 +66,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="TaskDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaskDetails.Designer.cs">
+      <DependentUpon>TaskDetails.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddNewTask.resx">
+      <DependentUpon>AddNewTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteTask.resx">
+      <DependentUpon>DeleteTask.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="homePage.resx">
       <DependentUpon>homePage.cs</DependentUpon>
@@ -75,6 +90,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TaskDetails.resx">
+      <DependentUpon>TaskDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

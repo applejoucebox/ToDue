@@ -63,7 +63,7 @@ namespace ToDue
             // 
             // btnAddNewTask
             // 
-            this.btnAddNewTask.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(188)))), ((int)(((byte)(148)))));
+            this.btnAddNewTask.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(193)))), ((int)(((byte)(219)))));
             this.btnAddNewTask.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(198)))), ((int)(((byte)(214)))));
             this.btnAddNewTask.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddNewTask.Location = new System.Drawing.Point(422, 154);
@@ -96,7 +96,7 @@ namespace ToDue
             // 
             // btnTask1
             // 
-            this.btnTask1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(167)))));
+            this.btnTask1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(198)))), ((int)(((byte)(209)))));
             this.btnTask1.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTask1.Location = new System.Drawing.Point(79, 197);
             this.btnTask1.Name = "btnTask1";
@@ -108,7 +108,7 @@ namespace ToDue
             // 
             // btnTask2
             // 
-            this.btnTask2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(167)))));
+            this.btnTask2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(198)))), ((int)(((byte)(209)))));
             this.btnTask2.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTask2.Location = new System.Drawing.Point(79, 240);
             this.btnTask2.Name = "btnTask2";
@@ -123,7 +123,7 @@ namespace ToDue
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(233)))), ((int)(((byte)(210)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(247)))), ((int)(((byte)(246)))));
             this.ClientSize = new System.Drawing.Size(684, 711);
             this.Controls.Add(this.btnTask2);
             this.Controls.Add(this.btnTask1);
