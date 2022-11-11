@@ -14,5 +14,13 @@ namespace ToDue.Models
         public string Subject { get; set; }
         public string Summary { get; set; }
         public string XDetails { get; set; }
+        public bool IsComplete { get; set; }
+    }
+
+    
+    //eventually want to pass in a TaskList to the HomePage
+    public class TaskList
+    {
+        List<Task> tList = new List<Task>();
     }
 }

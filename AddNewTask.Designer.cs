@@ -53,9 +53,10 @@ namespace ToDue
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblAdd.AutoSize = true;
             this.lblAdd.Font = new System.Drawing.Font("Calibri", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdd.Location = new System.Drawing.Point(232, 70);
+            this.lblAdd.Location = new System.Drawing.Point(309, 86);
+            this.lblAdd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAdd.Name = "lblAdd";
-            this.lblAdd.Size = new System.Drawing.Size(235, 45);
+            this.lblAdd.Size = new System.Drawing.Size(299, 58);
             this.lblAdd.TabIndex = 1;
             this.lblAdd.Text = "Add New Task";
             // 
@@ -63,26 +64,29 @@ namespace ToDue
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(100, 180);
+            this.label1.Location = new System.Drawing.Point(133, 222);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 18);
+            this.label1.Size = new System.Drawing.Size(98, 23);
             this.label1.TabIndex = 2;
             this.label1.Text = "Task Name:";
             // 
             // txtTaskName
             // 
-            this.txtTaskName.Location = new System.Drawing.Point(225, 180);
+            this.txtTaskName.Location = new System.Drawing.Point(300, 222);
+            this.txtTaskName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTaskName.Name = "txtTaskName";
-            this.txtTaskName.Size = new System.Drawing.Size(289, 20);
+            this.txtTaskName.Size = new System.Drawing.Size(384, 22);
             this.txtTaskName.TabIndex = 3;
             // 
             // lblDueDate
             // 
             this.lblDueDate.AutoSize = true;
             this.lblDueDate.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDueDate.Location = new System.Drawing.Point(100, 230);
+            this.lblDueDate.Location = new System.Drawing.Point(133, 283);
+            this.lblDueDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDueDate.Name = "lblDueDate";
-            this.lblDueDate.Size = new System.Drawing.Size(69, 18);
+            this.lblDueDate.Size = new System.Drawing.Size(86, 23);
             this.lblDueDate.TabIndex = 4;
             this.lblDueDate.Text = "Due Date:";
             // 
@@ -90,9 +94,10 @@ namespace ToDue
             // 
             this.lblPriority.AutoSize = true;
             this.lblPriority.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPriority.Location = new System.Drawing.Point(100, 280);
+            this.lblPriority.Location = new System.Drawing.Point(133, 345);
+            this.lblPriority.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPriority.Name = "lblPriority";
-            this.lblPriority.Size = new System.Drawing.Size(58, 18);
+            this.lblPriority.Size = new System.Drawing.Size(72, 23);
             this.lblPriority.TabIndex = 5;
             this.lblPriority.Text = "Priority:";
             // 
@@ -100,9 +105,10 @@ namespace ToDue
             // 
             this.lblSubject.AutoSize = true;
             this.lblSubject.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSubject.Location = new System.Drawing.Point(100, 330);
+            this.lblSubject.Location = new System.Drawing.Point(133, 406);
+            this.lblSubject.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSubject.Name = "lblSubject";
-            this.lblSubject.Size = new System.Drawing.Size(58, 18);
+            this.lblSubject.Size = new System.Drawing.Size(72, 23);
             this.lblSubject.TabIndex = 6;
             this.lblSubject.Text = "Subject:";
             // 
@@ -110,9 +116,10 @@ namespace ToDue
             // 
             this.lblSummary.AutoSize = true;
             this.lblSummary.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSummary.Location = new System.Drawing.Point(100, 380);
+            this.lblSummary.Location = new System.Drawing.Point(133, 468);
+            this.lblSummary.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSummary.Name = "lblSummary";
-            this.lblSummary.Size = new System.Drawing.Size(70, 18);
+            this.lblSummary.Size = new System.Drawing.Size(89, 23);
             this.lblSummary.TabIndex = 7;
             this.lblSummary.Text = "Summary:";
             // 
@@ -120,54 +127,61 @@ namespace ToDue
             // 
             this.lblExtendedDetails.AutoSize = true;
             this.lblExtendedDetails.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblExtendedDetails.Location = new System.Drawing.Point(100, 430);
+            this.lblExtendedDetails.Location = new System.Drawing.Point(133, 529);
+            this.lblExtendedDetails.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblExtendedDetails.Name = "lblExtendedDetails";
-            this.lblExtendedDetails.Size = new System.Drawing.Size(117, 18);
+            this.lblExtendedDetails.Size = new System.Drawing.Size(142, 23);
             this.lblExtendedDetails.TabIndex = 8;
             this.lblExtendedDetails.Text = "Extended Details:";
             // 
             // txtDueDate
             // 
-            this.txtDueDate.Location = new System.Drawing.Point(225, 230);
+            this.txtDueDate.Location = new System.Drawing.Point(300, 283);
+            this.txtDueDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDueDate.Name = "txtDueDate";
-            this.txtDueDate.Size = new System.Drawing.Size(289, 20);
+            this.txtDueDate.Size = new System.Drawing.Size(384, 22);
             this.txtDueDate.TabIndex = 4;
             // 
             // txtSummary
             // 
-            this.txtSummary.Location = new System.Drawing.Point(225, 380);
+            this.txtSummary.Location = new System.Drawing.Point(300, 468);
+            this.txtSummary.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSummary.Name = "txtSummary";
-            this.txtSummary.Size = new System.Drawing.Size(289, 20);
+            this.txtSummary.Size = new System.Drawing.Size(384, 22);
             this.txtSummary.TabIndex = 7;
             // 
             // txtXDetails
             // 
-            this.txtXDetails.Location = new System.Drawing.Point(225, 430);
+            this.txtXDetails.Location = new System.Drawing.Point(300, 529);
+            this.txtXDetails.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtXDetails.Name = "txtXDetails";
-            this.txtXDetails.Size = new System.Drawing.Size(289, 20);
+            this.txtXDetails.Size = new System.Drawing.Size(384, 22);
             this.txtXDetails.TabIndex = 8;
             // 
             // txtSubject
             // 
-            this.txtSubject.Location = new System.Drawing.Point(225, 330);
+            this.txtSubject.Location = new System.Drawing.Point(300, 406);
+            this.txtSubject.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSubject.Name = "txtSubject";
-            this.txtSubject.Size = new System.Drawing.Size(289, 20);
+            this.txtSubject.Size = new System.Drawing.Size(384, 22);
             this.txtSubject.TabIndex = 6;
             // 
             // txtPriority
             // 
-            this.txtPriority.Location = new System.Drawing.Point(225, 280);
+            this.txtPriority.Location = new System.Drawing.Point(300, 345);
+            this.txtPriority.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPriority.Name = "txtPriority";
-            this.txtPriority.Size = new System.Drawing.Size(289, 20);
+            this.txtPriority.Size = new System.Drawing.Size(384, 22);
             this.txtPriority.TabIndex = 5;
             // 
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(193)))), ((int)(((byte)(219)))));
             this.btnAdd.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(500, 600);
+            this.btnAdd.Location = new System.Drawing.Point(667, 738);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(123, 28);
+            this.btnAdd.Size = new System.Drawing.Size(164, 34);
             this.btnAdd.TabIndex = 10;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -177,9 +191,10 @@ namespace ToDue
             // 
             this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(215)))), ((int)(((byte)(214)))));
             this.btnCancel.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(366, 600);
+            this.btnCancel.Location = new System.Drawing.Point(488, 738);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(123, 28);
+            this.btnCancel.Size = new System.Drawing.Size(164, 34);
             this.btnCancel.TabIndex = 9;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
@@ -187,10 +202,10 @@ namespace ToDue
             // 
             // AddNewTask
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(247)))), ((int)(((byte)(246)))));
-            this.ClientSize = new System.Drawing.Size(684, 711);
+            this.ClientSize = new System.Drawing.Size(912, 875);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.txtPriority);
@@ -206,6 +221,7 @@ namespace ToDue
             this.Controls.Add(this.txtTaskName);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblAdd);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "AddNewTask";
             this.Text = "Form1";
             this.ResumeLayout(false);

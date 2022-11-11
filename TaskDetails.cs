@@ -12,25 +12,60 @@ namespace ToDue
 {
     public partial class TaskDetails : Form
     {
-        public TaskDetails(string taskName, string dueDate, string priority, string subject, string summary, string xDetails)
+        private ToDue.Models.Task t = new Models.Task();
+        public TaskDetails(ToDue.Models.Task passedIn)
         {
             InitializeComponent();
-            txtTaskName.Text = taskName;
-            txtDueDate.Text = priority;
-            txtPriority.Text = taskName;
-            txtSubject.Text = subject;
-            txtSummary.Text = summary;
-            txtXDetails.Text = xDetails;
+            t = passedIn;
+            loadInformation();
         }
 
-        private void btnAddNewTask_Click(object sender, EventArgs e)
+        private void btnMarkComplete_Click(object sender, EventArgs e)
         {
-
+            t.IsComplete = true;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnSave_Click(object sender, EventArgs e)
         {
-
+            //saves changes before returning back to HomePage
+            //for now can only see that the name has changed
+            updateInformation();
+            returnToHomePage();
         }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            //returns to HomePage without saving any changes
+            returnToHomePage();
+        }
+
+        private void loadInformation()
+        {
+            txtTaskName.Text = t.TaskName;
+            txtDueDate.Text = t.DueDate;
+            txtPriority.Text = t.Priority;
+            txtSubject.Text = t.Subject;
+            txtSummary.Text = t.Summary;
+            txtXDetails.Text = t.XDetails;
+        }
+        private void updateInformation()
+        {
+            t.TaskName = txtTaskName.Text;
+            t.DueDate = txtDueDate.Text;
+            t.Priority = txtPriority.Text;
+            t.Subject = txtSubject.Text;
+            t.Summary = txtSummary.Text;
+            t.XDetails = txtXDetails.Text;
+        }
+        private void returnToHomePage()
+        {
+            //moving from AddNewTask back to the HomePage 
+            HomePage newForm = new HomePage(t);
+            this.Hide();
+            newForm.ShowDialog();
+            this.Close();
+        }
+
+        
     }
 }

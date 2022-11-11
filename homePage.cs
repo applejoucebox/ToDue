@@ -12,10 +12,14 @@ namespace ToDue
 {
     public partial class HomePage : Form
     {
-        public HomePage(string btnTEST)
+        //will eventually want to pass in a TaskList to the HomePage
+        //public HomePage(ToDue.Models.TaskList tList)
+        //for now just testing with a singular task
+
+        public HomePage(ToDue.Models.Task testTask)
         {
             InitializeComponent();
-            btnTask1.Text = btnTEST;
+            btnTask1.Text = testTask.TaskName;
         }
 
         private void btnAddNewTask_Click(object sender, EventArgs e)

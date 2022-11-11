@@ -16,7 +16,11 @@ namespace ToDue
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new HomePage(""));
+
+            // starting out with one task to test
+            ToDue.Models.Task t = new ToDue.Models.Task();
+
+            Application.Run(new HomePage(t));
         }
     }
 }
