@@ -15,7 +15,28 @@ namespace ToDue
         public AddNewTask()
         {
             InitializeComponent();
+            
         }
 
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            returnToHomePage();
+        }
+
+       
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            returnToHomePage();
+        }
+
+
+        private void returnToHomePage()
+        {
+            //moving from AddNewTask form back to the HomePage
+            TaskDetails newForm = new TaskDetails(txtTaskName.Text, txtDueDate.Text, txtPriority.Text, txtSubject.Text, txtSummary.Text, txtXDetails.Text);
+            this.Hide();
+            newForm.ShowDialog();
+            this.Close();
+        }
     }
 }

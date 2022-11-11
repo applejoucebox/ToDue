@@ -1,7 +1,7 @@
 ﻿
 namespace ToDue
 {
-    partial class homePage
+    partial class HomePage
     {
         /// <summary>
         /// Required designer variable.
@@ -35,7 +35,6 @@ namespace ToDue
             this.lblSortBy = new System.Windows.Forms.Label();
             this.cboxSortBy = new System.Windows.Forms.ComboBox();
             this.btnTask1 = new System.Windows.Forms.Button();
-            this.btnTask2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -106,33 +105,20 @@ namespace ToDue
             this.btnTask1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTask1.UseVisualStyleBackColor = false;
             // 
-            // btnTask2
-            // 
-            this.btnTask2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(198)))), ((int)(((byte)(209)))));
-            this.btnTask2.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTask2.Location = new System.Drawing.Point(79, 240);
-            this.btnTask2.Name = "btnTask2";
-            this.btnTask2.Size = new System.Drawing.Size(204, 37);
-            this.btnTask2.TabIndex = 6;
-            this.btnTask2.Text = "Deca Club Meeting";
-            this.btnTask2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTask2.UseVisualStyleBackColor = false;
-            // 
-            // homePage
+            // HomePage
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(247)))), ((int)(((byte)(246)))));
             this.ClientSize = new System.Drawing.Size(684, 711);
-            this.Controls.Add(this.btnTask2);
             this.Controls.Add(this.btnTask1);
             this.Controls.Add(this.cboxSortBy);
             this.Controls.Add(this.lblSortBy);
             this.Controls.Add(this.btnAddNewTask);
             this.Controls.Add(this.lblTaskHeader);
             this.Controls.Add(this.lblTitle);
-            this.Name = "homePage";
+            this.Name = "HomePage";
             this.Text = "homePage";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -147,6 +133,5 @@ namespace ToDue
         private System.Windows.Forms.Label lblSortBy;
         private System.Windows.Forms.ComboBox cboxSortBy;
         private System.Windows.Forms.Button btnTask1;
-        private System.Windows.Forms.Button btnTask2;
     }
 }

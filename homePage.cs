@@ -10,16 +10,17 @@ using System.Windows.Forms;
 
 namespace ToDue
 {
-    public partial class homePage : Form
+    public partial class HomePage : Form
     {
-        public homePage()
+        public HomePage(string btnTEST)
         {
             InitializeComponent();
+            btnTask1.Text = btnTEST;
         }
 
         private void btnAddNewTask_Click(object sender, EventArgs e)
         {
-
+            goToAddNewTask();
         }
 
         private void cboxSortBy_SelectedIndexChanged(object sender, EventArgs e)
@@ -27,5 +28,13 @@ namespace ToDue
 
         }
 
+        private void goToAddNewTask()
+        {
+            //moving from HomePage to the AddNewTask form
+            AddNewTask newForm = new AddNewTask();
+            this.Hide();
+            newForm.ShowDialog();
+            this.Close();
+        }
     }
 }

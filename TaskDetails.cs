@@ -12,12 +12,23 @@ namespace ToDue
 {
     public partial class TaskDetails : Form
     {
-        public TaskDetails()
+        public TaskDetails(string taskName, string dueDate, string priority, string subject, string summary, string xDetails)
         {
             InitializeComponent();
+            txtTaskName.Text = taskName;
+            txtDueDate.Text = priority;
+            txtPriority.Text = taskName;
+            txtSubject.Text = subject;
+            txtSummary.Text = summary;
+            txtXDetails.Text = xDetails;
         }
 
         private void btnAddNewTask_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }

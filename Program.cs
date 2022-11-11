@@ -16,7 +16,7 @@ namespace ToDue
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AddNewTask());
+            Application.Run(new HomePage(""));
         }
     }
 }

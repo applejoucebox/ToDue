@@ -126,42 +126,42 @@ namespace ToDue
             this.txtTaskName.Location = new System.Drawing.Point(225, 180);
             this.txtTaskName.Name = "txtTaskName";
             this.txtTaskName.Size = new System.Drawing.Size(289, 20);
-            this.txtTaskName.TabIndex = 10;
+            this.txtTaskName.TabIndex = 3;
             // 
             // txtDueDate
             // 
             this.txtDueDate.Location = new System.Drawing.Point(225, 230);
             this.txtDueDate.Name = "txtDueDate";
             this.txtDueDate.Size = new System.Drawing.Size(289, 20);
-            this.txtDueDate.TabIndex = 11;
+            this.txtDueDate.TabIndex = 4;
             // 
             // txtPriority
             // 
             this.txtPriority.Location = new System.Drawing.Point(225, 280);
             this.txtPriority.Name = "txtPriority";
             this.txtPriority.Size = new System.Drawing.Size(289, 20);
-            this.txtPriority.TabIndex = 16;
+            this.txtPriority.TabIndex = 5;
             // 
             // txtSubject
             // 
             this.txtSubject.Location = new System.Drawing.Point(225, 330);
             this.txtSubject.Name = "txtSubject";
             this.txtSubject.Size = new System.Drawing.Size(289, 20);
-            this.txtSubject.TabIndex = 17;
+            this.txtSubject.TabIndex = 6;
             // 
             // txtSummary
             // 
             this.txtSummary.Location = new System.Drawing.Point(225, 380);
             this.txtSummary.Name = "txtSummary";
             this.txtSummary.Size = new System.Drawing.Size(289, 20);
-            this.txtSummary.TabIndex = 18;
+            this.txtSummary.TabIndex = 7;
             // 
             // txtXDetails
             // 
             this.txtXDetails.Location = new System.Drawing.Point(225, 430);
             this.txtXDetails.Name = "txtXDetails";
             this.txtXDetails.Size = new System.Drawing.Size(289, 20);
-            this.txtXDetails.TabIndex = 19;
+            this.txtXDetails.TabIndex = 8;
             // 
             // btnSave
             // 
@@ -170,7 +170,7 @@ namespace ToDue
             this.btnSave.Location = new System.Drawing.Point(500, 600);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(123, 28);
-            this.btnSave.TabIndex = 20;
+            this.btnSave.TabIndex = 11;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
             // 
@@ -181,7 +181,7 @@ namespace ToDue
             this.btnCancel.Location = new System.Drawing.Point(366, 600);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(123, 28);
-            this.btnCancel.TabIndex = 21;
+            this.btnCancel.TabIndex = 10;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
             // 
@@ -192,7 +192,7 @@ namespace ToDue
             this.btnDelete.Location = new System.Drawing.Point(103, 600);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(123, 28);
-            this.btnDelete.TabIndex = 22;
+            this.btnDelete.TabIndex = 9;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
             // 
@@ -207,6 +207,7 @@ namespace ToDue
             this.button1.TabIndex = 3;
             this.button1.Text = "Mark As Complete";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // TaskDetails
             // 

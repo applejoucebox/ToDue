@@ -131,35 +131,35 @@ namespace ToDue
             this.txtDueDate.Location = new System.Drawing.Point(225, 230);
             this.txtDueDate.Name = "txtDueDate";
             this.txtDueDate.Size = new System.Drawing.Size(289, 20);
-            this.txtDueDate.TabIndex = 9;
+            this.txtDueDate.TabIndex = 4;
             // 
             // txtSummary
             // 
             this.txtSummary.Location = new System.Drawing.Point(225, 380);
             this.txtSummary.Name = "txtSummary";
             this.txtSummary.Size = new System.Drawing.Size(289, 20);
-            this.txtSummary.TabIndex = 10;
+            this.txtSummary.TabIndex = 7;
             // 
             // txtXDetails
             // 
             this.txtXDetails.Location = new System.Drawing.Point(225, 430);
             this.txtXDetails.Name = "txtXDetails";
             this.txtXDetails.Size = new System.Drawing.Size(289, 20);
-            this.txtXDetails.TabIndex = 11;
+            this.txtXDetails.TabIndex = 8;
             // 
             // txtSubject
             // 
             this.txtSubject.Location = new System.Drawing.Point(225, 330);
             this.txtSubject.Name = "txtSubject";
             this.txtSubject.Size = new System.Drawing.Size(289, 20);
-            this.txtSubject.TabIndex = 12;
+            this.txtSubject.TabIndex = 6;
             // 
             // txtPriority
             // 
             this.txtPriority.Location = new System.Drawing.Point(225, 280);
             this.txtPriority.Name = "txtPriority";
             this.txtPriority.Size = new System.Drawing.Size(289, 20);
-            this.txtPriority.TabIndex = 13;
+            this.txtPriority.TabIndex = 5;
             // 
             // btnAdd
             // 
@@ -168,9 +168,10 @@ namespace ToDue
             this.btnAdd.Location = new System.Drawing.Point(500, 600);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(123, 28);
-            this.btnAdd.TabIndex = 14;
+            this.btnAdd.TabIndex = 10;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnCancel
             // 
@@ -179,9 +180,10 @@ namespace ToDue
             this.btnCancel.Location = new System.Drawing.Point(366, 600);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(123, 28);
-            this.btnCancel.TabIndex = 15;
+            this.btnCancel.TabIndex = 9;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // AddNewTask
             // 
