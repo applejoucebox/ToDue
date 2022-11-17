@@ -34,7 +34,6 @@ namespace ToDue
             this.btnAddNewTask = new System.Windows.Forms.Button();
             this.lblSortBy = new System.Windows.Forms.Label();
             this.cboxSortBy = new System.Windows.Forms.ComboBox();
-            this.btnTask1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -93,18 +92,6 @@ namespace ToDue
             this.cboxSortBy.TabIndex = 4;
             this.cboxSortBy.SelectedIndexChanged += new System.EventHandler(this.cboxSortBy_SelectedIndexChanged);
             // 
-            // btnTask1
-            // 
-            this.btnTask1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(198)))), ((int)(((byte)(209)))));
-            this.btnTask1.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTask1.Location = new System.Drawing.Point(79, 197);
-            this.btnTask1.Name = "btnTask1";
-            this.btnTask1.Size = new System.Drawing.Size(204, 37);
-            this.btnTask1.TabIndex = 5;
-            this.btnTask1.Text = "Study @ Summermoon";
-            this.btnTask1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTask1.UseVisualStyleBackColor = false;
-            // 
             // HomePage
             // 
             this.AllowDrop = true;
@@ -112,7 +99,6 @@ namespace ToDue
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(247)))), ((int)(((byte)(246)))));
             this.ClientSize = new System.Drawing.Size(684, 711);
-            this.Controls.Add(this.btnTask1);
             this.Controls.Add(this.cboxSortBy);
             this.Controls.Add(this.lblSortBy);
             this.Controls.Add(this.btnAddNewTask);
@@ -132,6 +118,5 @@ namespace ToDue
         private System.Windows.Forms.Button btnAddNewTask;
         private System.Windows.Forms.Label lblSortBy;
         private System.Windows.Forms.ComboBox cboxSortBy;
-        private System.Windows.Forms.Button btnTask1;
     }
 }

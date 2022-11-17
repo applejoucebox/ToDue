@@ -13,10 +13,12 @@ namespace ToDue
     public partial class TaskDetails : Form
     {
         private ToDue.Models.Task t = new Models.Task();
-        public TaskDetails(ToDue.Models.Task passedIn)
+        private ToDue.Models.TaskList tasks = new Models.TaskList();
+        public TaskDetails(ToDue.Models.Task passedIn, ToDue.Models.TaskList tasksPassedIn)
         {
             InitializeComponent();
             t = passedIn;
+            tasks = tasksPassedIn;
             loadInformation();
         }
 
@@ -60,7 +62,7 @@ namespace ToDue
         private void returnToHomePage()
         {
             //moving from AddNewTask back to the HomePage 
-            HomePage newForm = new HomePage(t);
+            HomePage newForm = new HomePage(tasks);
             this.Hide();
             newForm.ShowDialog();
             this.Close();

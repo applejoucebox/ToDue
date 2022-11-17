@@ -17,10 +17,10 @@ namespace ToDue
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            // starting out with one task to test
-            ToDue.Models.Task t = new ToDue.Models.Task();
+            // starting out with empty taskList
+            ToDue.Models.TaskList tasks = new ToDue.Models.TaskList();
 
-            Application.Run(new HomePage(t));
+            Application.Run(new HomePage(tasks));
         }
     }
 }

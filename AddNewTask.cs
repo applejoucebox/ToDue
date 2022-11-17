@@ -14,10 +14,12 @@ namespace ToDue
     {
         //creating Task object that the user will be working with
         private ToDue.Models.Task t = new Models.Task();
+        private ToDue.Models.TaskList tasks = new Models.TaskList();
 
-        public AddNewTask()
+        public AddNewTask(ToDue.Models.TaskList tasksPassedIn)
         {
             InitializeComponent();
+            tasks = tasksPassedIn;
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -30,13 +32,13 @@ namespace ToDue
             t.Summary = txtSummary.Text;
             t.XDetails = txtXDetails.Text;
 
-            //evnetually want to ADD TO TASKLIST here 
+            //ADD TO TASKLIST  
+            tasks.addTask(t);
 
             //going to TaskDetails with updated information for preview
             goToTaskDetails();
         }
 
-       
         private void btnCancel_Click(object sender, EventArgs e)
         {
             //returning to HomePage without updating Task or TaskList
@@ -46,7 +48,7 @@ namespace ToDue
         private void goToTaskDetails()
         {
             //moving from AddNewTask to TaskDetails
-            TaskDetails newForm = new TaskDetails(t);
+            TaskDetails newForm = new TaskDetails(t, tasks);
             this.Hide();
             newForm.ShowDialog();
             this.Close();
@@ -54,7 +56,7 @@ namespace ToDue
         private void returnToHomePage()
         {
             //moving from AddNewTask back to the HomePage 
-            HomePage newForm = new HomePage(t);
+            HomePage newForm = new HomePage(tasks);
             this.Hide();
             newForm.ShowDialog();
             this.Close();

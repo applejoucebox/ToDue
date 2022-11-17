@@ -21,6 +21,21 @@ namespace ToDue.Models
     //eventually want to pass in a TaskList to the HomePage
     public class TaskList
     {
-        List<Task> tList = new List<Task>();
+        List<ToDue.Models.Task> tList = new List<ToDue.Models.Task>();
+
+        public List<ToDue.Models.Task> getTasks()
+        {
+            return tList;
+        }
+
+        public void setTasks(List<ToDue.Models.Task> tasksPassedIn)
+        {
+            tList = tasksPassedIn;
+        }
+
+        public void addTask(Task t)
+        {
+            tList.Add(t);
+        }
     }
 }

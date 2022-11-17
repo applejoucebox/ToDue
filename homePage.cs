@@ -15,11 +15,12 @@ namespace ToDue
         //will eventually want to pass in a TaskList to the HomePage
         //public HomePage(ToDue.Models.TaskList tList)
         //for now just testing with a singular task
-
-        public HomePage(ToDue.Models.Task testTask)
+        private ToDue.Models.TaskList tasks = new ToDue.Models.TaskList();
+        public HomePage(ToDue.Models.TaskList tasksPassedIn)
         {
             InitializeComponent();
-            btnTask1.Text = testTask.TaskName;
+            tasks = tasksPassedIn;
+            addAllTasksFromList();
         }
 
         private void btnAddNewTask_Click(object sender, EventArgs e)
@@ -35,10 +36,34 @@ namespace ToDue
         private void goToAddNewTask()
         {
             //moving from HomePage to the AddNewTask form
-            AddNewTask newForm = new AddNewTask();
+            AddNewTask newForm = new AddNewTask(tasks);
             this.Hide();
             newForm.ShowDialog();
             this.Close();
         }
+
+        private void addSingleTaskButton(ToDue.Models.Task t, int location)
+        {
+            Button newTaskButton = new Button();
+            this.Controls.Add(newTaskButton);
+            newTaskButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(198)))), ((int)(((byte)(209)))));
+            newTaskButton.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            newTaskButton.Location = new System.Drawing.Point(79, 197 + 50*location);
+            newTaskButton.Size = new System.Drawing.Size(204, 37);
+            newTaskButton.TabIndex = 5;
+            newTaskButton.Text = t.TaskName;
+            newTaskButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            newTaskButton.UseVisualStyleBackColor = false;
+        }
+
+       
+        private void addAllTasksFromList()
+        {
+            for (int i = 0; i < tasks.getTasks().Count(); i++)
+            {
+                addSingleTaskButton(tasks.getTasks()[i], i);
+            }
+        }
+
     }
 }
