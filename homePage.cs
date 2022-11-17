@@ -42,10 +42,12 @@ namespace ToDue
             this.Close();
         }
 
-        private void addSingleTaskButton(ToDue.Models.Task t, int location)
+        private Button addSingleTaskButton(ToDue.Models.Task t, int location)
         {
             Button newTaskButton = new Button();
             this.Controls.Add(newTaskButton);
+
+            //styling and location of the button
             newTaskButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(198)))), ((int)(((byte)(209)))));
             newTaskButton.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             newTaskButton.Location = new System.Drawing.Point(79, 197 + 50*location);
@@ -54,14 +56,31 @@ namespace ToDue
             newTaskButton.Text = t.TaskName;
             newTaskButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             newTaskButton.UseVisualStyleBackColor = false;
+            
+            newTaskButton.Click += new EventHandler((sender, e) => taskButtonClick(sender, e, t));
+
+            return newTaskButton;
         }
 
        
+        private void taskButtonClick (object sender, EventArgs e, ToDue.Models.Task t)
+        {
+            //moving from HomePage to the TaskDetails form
+            TaskDetails newForm = new TaskDetails(t, tasks);
+            this.Hide();
+            newForm.ShowDialog();
+            this.Close();
+        }
+
         private void addAllTasksFromList()
         {
             for (int i = 0; i < tasks.getTasks().Count(); i++)
             {
-                addSingleTaskButton(tasks.getTasks()[i], i);
+                //creating the buttons for each task
+                Button currentTaskBtn = addSingleTaskButton(tasks.getTasks()[i], i);
+
+                //adding the event handlers
+                //currentTaskBtn.Click += new EventHandler((sender, e) => taskButtonClick(sender, e, tasks.getTasks()[i]));
             }
         }
 
