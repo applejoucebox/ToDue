@@ -39,8 +39,8 @@ namespace ToDue
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblPriority = new System.Windows.Forms.Label();
-            this.lblSubject = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.lblSubject = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.lblSummary = new System.Windows.Forms.Label();
             this.lblExtendedDetails = new System.Windows.Forms.Label();
@@ -157,25 +157,25 @@ namespace ToDue
             this.lblPriority.TabIndex = 30;
             this.lblPriority.Text = "placeholder";
             // 
-            // lblSubject
-            // 
-            this.lblSubject.AutoSize = true;
-            this.lblSubject.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSubject.Location = new System.Drawing.Point(100, 449);
-            this.lblSubject.Name = "lblSubject";
-            this.lblSubject.Size = new System.Drawing.Size(58, 18);
-            this.lblSubject.TabIndex = 31;
-            this.lblSubject.Text = "Subject:";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(225, 449);
+            this.label5.Location = new System.Drawing.Point(100, 449);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(82, 18);
-            this.label5.TabIndex = 32;
-            this.label5.Text = "placeholder";
+            this.label5.Size = new System.Drawing.Size(58, 18);
+            this.label5.TabIndex = 31;
+            this.label5.Text = "Subject:";
+            // 
+            // lblSubject
+            // 
+            this.lblSubject.AutoSize = true;
+            this.lblSubject.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubject.Location = new System.Drawing.Point(225, 449);
+            this.lblSubject.Name = "lblSubject";
+            this.lblSubject.Size = new System.Drawing.Size(82, 18);
+            this.lblSubject.TabIndex = 32;
+            this.lblSubject.Text = "placeholder";
             // 
             // label6
             // 
@@ -227,8 +227,8 @@ namespace ToDue
             this.Controls.Add(this.lblExtendedDetails);
             this.Controls.Add(this.lblSummary);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.lblSubject);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.lblPriority);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblDueDate);
@@ -258,8 +258,8 @@ namespace ToDue
         public System.Windows.Forms.Label label4;
         public System.Windows.Forms.Label label3;
         public System.Windows.Forms.Label lblPriority;
-        public System.Windows.Forms.Label lblSubject;
         public System.Windows.Forms.Label label5;
+        public System.Windows.Forms.Label lblSubject;
         public System.Windows.Forms.Label label6;
         public System.Windows.Forms.Label lblSummary;
         public System.Windows.Forms.Label lblExtendedDetails;

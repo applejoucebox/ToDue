@@ -30,7 +30,6 @@ namespace ToDue
         private void btnSave_Click(object sender, EventArgs e)
         {
             //saves changes before returning back to HomePage
-            //for now can only see that the name has changed
             updateInformation();
             returnToHomePage();
         }
@@ -39,6 +38,14 @@ namespace ToDue
         {
             //returns to HomePage without saving any changes
             returnToHomePage();
+        }
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            //goes to Delete page
+            updateInformation();
+            returnToHomePage();
+
+            //tasks.getTasks().Remove(t);
         }
 
         private void loadInformation()
@@ -61,13 +68,21 @@ namespace ToDue
         }
         private void returnToHomePage()
         {
-            //moving from AddNewTask back to the HomePage 
+            //moving from TaskDetails back to the HomePage 
             HomePage newForm = new HomePage(tasks);
             this.Hide();
             newForm.ShowDialog();
             this.Close();
         }
 
-        
+        private void goToDeletePage()
+        {
+            //moving from TaskDetails to the Delete page
+            DeleteTask newForm = new DeleteTask(t, tasks);
+            this.Hide();
+            newForm.ShowDialog();
+            this.Close();
+        }
+
     }
 }

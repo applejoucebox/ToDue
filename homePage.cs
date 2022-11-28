@@ -42,21 +42,25 @@ namespace ToDue
             this.Close();
         }
 
+
         private Button addSingleTaskButton(ToDue.Models.Task t, int location)
         {
             Button newTaskButton = new Button();
             this.Controls.Add(newTaskButton);
 
-            //styling and location of the button
+            //customizing the appearance of each button
             newTaskButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(198)))), ((int)(((byte)(209)))));
             newTaskButton.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            newTaskButton.Location = new System.Drawing.Point(79, 197 + 50*location);
             newTaskButton.Size = new System.Drawing.Size(204, 37);
             newTaskButton.TabIndex = 5;
             newTaskButton.Text = t.TaskName;
             newTaskButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             newTaskButton.UseVisualStyleBackColor = false;
-            
+
+            //changing the location of the buttons 
+            newTaskButton.Location = new System.Drawing.Point(79, 197 + 50 * location);
+
+            //adding the event handlers for individual buttons
             newTaskButton.Click += new EventHandler((sender, e) => taskButtonClick(sender, e, t));
 
             return newTaskButton;
@@ -79,8 +83,6 @@ namespace ToDue
                 //creating the buttons for each task
                 Button currentTaskBtn = addSingleTaskButton(tasks.getTasks()[i], i);
 
-                //adding the event handlers
-                //currentTaskBtn.Click += new EventHandler((sender, e) => taskButtonClick(sender, e, tasks.getTasks()[i]));
             }
         }
 
