@@ -20,11 +20,14 @@ namespace ToDue
             t = passedIn;
             tasks = tasksPassedIn;
             loadInformation();
+            anchorWindow();
+
         }
 
         private void btnMarkComplete_Click(object sender, EventArgs e)
         {
             t.IsComplete = true;
+            returnToHomePage();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -44,8 +47,6 @@ namespace ToDue
             //goes to Delete page
             updateInformation();
             goToDeletePage();
-
-            //tasks.getTasks().Remove(t);
         }
 
         private void loadInformation()
@@ -74,7 +75,6 @@ namespace ToDue
             newForm.ShowDialog();
             this.Close();
         }
-
         private void goToDeletePage()
         {
             //moving from TaskDetails to the Delete page
@@ -83,6 +83,12 @@ namespace ToDue
             newForm.ShowDialog();
             this.Close();
         }
-
+        private void anchorWindow()
+        {
+            this.CenterToParent();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+        }
     }
 }

@@ -104,6 +104,7 @@ namespace ToDue
             this.Controls.Add(this.btnAddNewTask);
             this.Controls.Add(this.lblTaskHeader);
             this.Controls.Add(this.lblTitle);
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Name = "HomePage";
             this.Text = "homePage";
             this.ResumeLayout(false);

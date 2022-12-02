@@ -19,6 +19,8 @@ namespace ToDue
         public AddNewTask(ToDue.Models.TaskList tasksPassedIn)
         {
             InitializeComponent();
+            anchorWindow();
+
             tasks = tasksPassedIn;
         }
 
@@ -61,6 +63,12 @@ namespace ToDue
             newForm.ShowDialog();
             this.Close();
         }
-
+        private void anchorWindow()
+        {
+            this.CenterToParent();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+        }
     }
 }

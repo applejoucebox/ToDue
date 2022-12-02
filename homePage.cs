@@ -12,13 +12,13 @@ namespace ToDue
 {
     public partial class HomePage : Form
     {
-        //will eventually want to pass in a TaskList to the HomePage
-        //public HomePage(ToDue.Models.TaskList tList)
-        //for now just testing with a singular task
+        //passing in "the" tasklist to the homepage
         private ToDue.Models.TaskList tasks = new ToDue.Models.TaskList();
         public HomePage(ToDue.Models.TaskList tasksPassedIn)
         {
             InitializeComponent();
+            anchorWindow();
+
             tasks = tasksPassedIn;
             addAllTasksFromList();
         }
@@ -49,10 +49,21 @@ namespace ToDue
             this.Controls.Add(newTaskButton);
 
             //customizing the appearance of each button
-            newTaskButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(198)))), ((int)(((byte)(209)))));
-            newTaskButton.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            if (t.IsComplete != true)
+            {
+                newTaskButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(198)))), ((int)(((byte)(209)))));
+                newTaskButton.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
+            }
+            else
+            {
+                newTaskButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(225)))), ((int)(((byte)(230)))));
+                newTaskButton.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+               
+            }
+
+            //common styles between the buttons
             newTaskButton.Size = new System.Drawing.Size(204, 37);
-            newTaskButton.TabIndex = 5;
             newTaskButton.Text = t.TaskName;
             newTaskButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             newTaskButton.UseVisualStyleBackColor = false;
@@ -85,6 +96,12 @@ namespace ToDue
 
             }
         }
-
+        private void anchorWindow()
+        {
+            this.CenterToScreen();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+        }
     }
 }

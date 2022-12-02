@@ -20,10 +20,12 @@ namespace ToDue
             t = passedIn;
             tasks = tasksPassedIn;
             loadInformation();
+            anchorWindow();         
 
             //need to figure out scaling + location of confirmation message
-            //lblDeleteConfirmation.Text = "Delete " + t.TaskName + "?";
-            //lblDeleteConfirmation.Location = new System.Drawing.Point((434 - (int)lblDeleteConfirmation.Width/2), 190);
+            lblDeleteConfirmation.Text = "Delete " + t.TaskName + "?";
+            int center = (434 - (int)(lblDeleteConfirmation.Width / 2));
+            lblDeleteConfirmation.Location = new System.Drawing.Point(center, 190);
         }
 
 
@@ -56,6 +58,14 @@ namespace ToDue
             this.Hide();
             newForm.ShowDialog();
             this.Close();
+        }
+
+        private void anchorWindow()
+        {
+            this.CenterToParent();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
         }
     }
 }
