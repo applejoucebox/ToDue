@@ -20,16 +20,22 @@ namespace ToDue
             t = passedIn;
             tasks = tasksPassedIn;
             loadInformation();
+
+            //need to figure out scaling + location of confirmation message
+            //lblDeleteConfirmation.Text = "Delete " + t.TaskName + "?";
+            //lblDeleteConfirmation.Location = new System.Drawing.Point((434 - (int)lblDeleteConfirmation.Width/2), 190);
         }
-       
+
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-
+            returnToHomePage();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            tasks.getTasks().Remove(t);
+            returnToHomePage();
 
         }
 
@@ -41,6 +47,15 @@ namespace ToDue
             lblSubject.Text = t.Subject;
             lblSummary.Text = t.Summary;
             lblXDetails.Text = t.XDetails;
+        }
+
+        private void returnToHomePage()
+        {
+            //moving from DeleteTask back to the HomePage 
+            HomePage newForm = new HomePage(tasks);
+            this.Hide();
+            newForm.ShowDialog();
+            this.Close();
         }
     }
 }

@@ -43,7 +43,7 @@ namespace ToDue
         {
             //goes to Delete page
             updateInformation();
-            returnToHomePage();
+            goToDeletePage();
 
             //tasks.getTasks().Remove(t);
         }
