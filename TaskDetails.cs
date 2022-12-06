@@ -21,12 +21,11 @@ namespace ToDue
             tasks = tasksPassedIn;
             loadInformation();
             anchorWindow();
-
         }
 
         private void btnMarkComplete_Click(object sender, EventArgs e)
         {
-            t.IsComplete = true;
+            t.IsComplete = !t.IsComplete;
             returnToHomePage();
         }
 
@@ -57,6 +56,16 @@ namespace ToDue
             txtSubject.Text = t.Subject;
             txtSummary.Text = t.Summary;
             txtXDetails.Text = t.XDetails;
+            
+            //changing the text of the mark (un)complete button
+            if (t.IsComplete == false)
+            {
+                btnMarkComplete.Text = "Mark Complete";
+            }
+            else
+            {
+                btnMarkComplete.Text = "Mark Un-Complete";
+            }
         }
         private void updateInformation()
         {

@@ -21,6 +21,7 @@ namespace ToDue
 
             tasks = tasksPassedIn;
             addAllTasksFromList();
+
         }
 
         private void btnAddNewTask_Click(object sender, EventArgs e)
@@ -30,6 +31,11 @@ namespace ToDue
 
         private void cboxSortBy_SelectedIndexChanged(object sender, EventArgs e)
         {
+            var temp = tasks.getTasks().OrderBy(o => o.DueDate);
+            for (int i = 0; i < temp.Count(); i++)
+            {
+                tasks.addTask(temp.ElementAt(i));
+            }
 
         }
 

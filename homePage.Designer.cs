@@ -86,6 +86,11 @@ namespace ToDue
             // 
             this.cboxSortBy.BackColor = System.Drawing.Color.White;
             this.cboxSortBy.FormattingEnabled = true;
+            this.cboxSortBy.Items.AddRange(new object[] {
+            "Name",
+            "Due Date",
+            "Priority",
+            "Subject"});
             this.cboxSortBy.Location = new System.Drawing.Point(473, 217);
             this.cboxSortBy.Name = "cboxSortBy";
             this.cboxSortBy.Size = new System.Drawing.Size(149, 21);
