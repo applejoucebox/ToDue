@@ -31,13 +31,22 @@ namespace ToDue
 
         private void cboxSortBy_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var temp = tasks.getTasks().OrderBy(o => o.DueDate);
-            for (int i = 0; i < temp.Count(); i++)
-            {
-                tasks.addTask(temp.ElementAt(i));
-            }
+            addSingleTaskButton(tasks.getTasks().ElementAt(0), 200);
+
+            //var temp = tasks.getTasks().OrderBy(o => o.DueDate);
+            //for (int i = 0; i < temp.Count(); i++)
+            //{
+            //    addSingleTaskButton(temp.ElementAt(i), 200);
+
+            // //   tasks.addTask(temp.ElementAt(i));
+            //}
+
+            //this.Refresh();
 
         }
+
+
+
 
         private void goToAddNewTask()
         {
