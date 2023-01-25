@@ -23,7 +23,7 @@ namespace ToDue
             addAllTasksFromList();
 
         }
-
+         
         private void btnAddNewTask_Click(object sender, EventArgs e)
         {
             goToAddNewTask();
@@ -31,18 +31,18 @@ namespace ToDue
 
         private void cboxSortBy_SelectedIndexChanged(object sender, EventArgs e)
         {
-            addSingleTaskButton(tasks.getTasks().ElementAt(0), 200);
 
-            //var temp = tasks.getTasks().OrderBy(o => o.DueDate);
-            //for (int i = 0; i < temp.Count(); i++)
-            //{
-            //    addSingleTaskButton(temp.ElementAt(i), 200);
+            var temp = tasks.getTasks().OrderBy(o => o.DueDate);
+            for(int i = 0; i < temp.Count(); i++)
+            {
+                tasks.getTasks()[i] = temp.ElementAt(i);
+                Button currentTaskBtn = addSingleTaskButton(tasks.getTasks()[i], i+3);
+            }
 
-            // //   tasks.addTask(temp.ElementAt(i));
-            //}
-
-            //this.Refresh();
-
+            //HomePage newForm = new HomePage(tasks);
+            //this.Hide();
+            //newForm.ShowDialog();
+            //this.Close();
         }
 
 
