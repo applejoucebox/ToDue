@@ -32,17 +32,17 @@ namespace ToDue
         private void cboxSortBy_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            var temp = tasks.getTasks().OrderBy(o => o.DueDate);
+            var temp = tasks.getTasks().OrderBy(o => o.DueDate).ToList();
             for(int i = 0; i < temp.Count(); i++)
             {
                 tasks.getTasks()[i] = temp.ElementAt(i);
-                Button currentTaskBtn = addSingleTaskButton(tasks.getTasks()[i], i+3);
             }
 
-            //HomePage newForm = new HomePage(tasks);
-            //this.Hide();
-            //newForm.ShowDialog();
-            //this.Close();
+
+            HomePage newForm = new HomePage(tasks);
+            this.Hide();
+            newForm.ShowDialog();
+            this.Close();
         }
 
 
