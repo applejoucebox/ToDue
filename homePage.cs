@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -32,20 +33,23 @@ namespace ToDue
         private void cboxSortBy_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            var temp = tasks.getTasks().OrderBy(o => o.DueDate).ToList();
+            //name duedate priority subject
+            var c = this.cboxSortBy.SelectedIndex;
+
+            String prop = tasks.getTasks().GetType().GetProperties()[1].ToString();
+            var temp = tasks.getTasks().OrderBy(o => o.GetType().GetProperties()[1]).ToList();
             for(int i = 0; i < temp.Count(); i++)
             {
                 tasks.getTasks()[i] = temp.ElementAt(i);
             }
 
-
+            
+            //force refreshing/reloading my form
             HomePage newForm = new HomePage(tasks);
             this.Hide();
             newForm.ShowDialog();
             this.Close();
         }
-
-
 
 
         private void goToAddNewTask()
