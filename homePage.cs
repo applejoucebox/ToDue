@@ -32,19 +32,37 @@ namespace ToDue
 
         private void cboxSortBy_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //getting the selected category by which the client wishes to sort by
+            String category = cboxSortBy.Text;
+            var temp = tasks.getTasks().ToList();
 
-            //name duedate priority subject
-            var c = this.cboxSortBy.SelectedIndex;
+            //sorting the tasks according to the criteria
+            switch (category)
+            {
+                case "Name":
+                    temp = tasks.getTasks().OrderBy(o => o.TaskName).ToList();
+                    break;
 
-            String prop = tasks.getTasks().GetType().GetProperties()[1].ToString();
-            var temp = tasks.getTasks().OrderBy(o => o.GetType().GetProperties()[1]).ToList();
-            for(int i = 0; i < temp.Count(); i++)
+                case "Due Date":
+                    temp = tasks.getTasks().OrderBy(o => o.DueDate).ToList();
+                    break;
+
+                case "Priority":
+                    temp = tasks.getTasks().OrderBy(o => o.Priority).ToList();
+                    break;
+
+                case "Subject":
+                    temp = tasks.getTasks().OrderBy(o => o.Subject).ToList();
+                    break;
+            }
+
+            //resorting the tasks in the taskList object
+            for (int i = 0; i < temp.Count(); i++)
             {
                 tasks.getTasks()[i] = temp.ElementAt(i);
             }
 
-            
-            //force refreshing/reloading my form
+
             HomePage newForm = new HomePage(tasks);
             this.Hide();
             newForm.ShowDialog();
@@ -60,7 +78,6 @@ namespace ToDue
             newForm.ShowDialog();
             this.Close();
         }
-
 
         private Button addSingleTaskButton(ToDue.Models.Task t, int location)
         {
@@ -121,6 +138,19 @@ namespace ToDue
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
+        }
+
+        public static string[] PropertiesFromType(object atype)
+        {
+            if (atype == null) return new string[] { };
+            Type t = atype.GetType();
+            PropertyInfo[] props = t.GetProperties();
+            List<string> propNames = new List<string>();
+            foreach (PropertyInfo prp in props)
+            {
+                propNames.Add(prp.Name);
+            }
+            return propNames.ToArray();
         }
     }
 }

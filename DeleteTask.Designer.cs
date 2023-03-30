@@ -68,19 +68,21 @@ namespace ToDue
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDeleteConfirmation.AutoSize = true;
             this.lblDeleteConfirmation.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDeleteConfirmation.Location = new System.Drawing.Point(383, 190);
+            this.lblDeleteConfirmation.Location = new System.Drawing.Point(33, 190);
             this.lblDeleteConfirmation.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDeleteConfirmation.MinimumSize = new System.Drawing.Size(800, 0);
             this.lblDeleteConfirmation.Name = "lblDeleteConfirmation";
-            this.lblDeleteConfirmation.Size = new System.Drawing.Size(102, 41);
+            this.lblDeleteConfirmation.Size = new System.Drawing.Size(800, 41);
             this.lblDeleteConfirmation.TabIndex = 3;
             this.lblDeleteConfirmation.Text = "delete";
+            this.lblDeleteConfirmation.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // btnCancel
             // 
             this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(215)))), ((int)(((byte)(214)))));
             this.btnCancel.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.Location = new System.Drawing.Point(481, 313);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(164, 34);
             this.btnCancel.TabIndex = 16;
@@ -93,7 +95,7 @@ namespace ToDue
             this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(184)))), ((int)(((byte)(199)))));
             this.btnDelete.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.Location = new System.Drawing.Point(665, 313);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(164, 34);
             this.btnDelete.TabIndex = 23;
@@ -255,7 +257,7 @@ namespace ToDue
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.lblDeleteConfirmation);
             this.Controls.Add(this.lblDelete);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DeleteTask";
             this.Text = "DeleteTask";
             this.ResumeLayout(false);

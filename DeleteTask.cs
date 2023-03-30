@@ -20,12 +20,14 @@ namespace ToDue
             t = passedIn;
             tasks = tasksPassedIn;
             loadInformation();
-            anchorWindow();         
+                        anchorWindow();
 
-            //need to figure out scaling + location of confirmation message
+
+            //centered delete message
             lblDeleteConfirmation.Text = "Delete " + t.TaskName + "?";
-            int center = (434 - (int)(lblDeleteConfirmation.Width / 2));
-            lblDeleteConfirmation.Location = new System.Drawing.Point(center, 190);
+            
+            
+
         }
 
 
